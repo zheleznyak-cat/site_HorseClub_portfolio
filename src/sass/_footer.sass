@@ -1,0 +1,201 @@
+footer
+  margin: 0 auto
+  position: relative
+  overflow: hidden
+  max-width: 192rem
+  
+
+.footer
+  &__contacts
+    position: absolute
+    padding: 0 0 6rem 6rem
+    top: 8%
+    left: 10%
+    background-color: $color-white
+    z-index: 500
+    @include respond(auxiliary)
+      left: 6%
+      padding: 0 0 4rem 4rem
+    @include respond(big-screen)
+      left: 4%
+      padding: 0 0 2rem 2rem
+    @include respond(tab-land)
+      left: 2%
+    @include respond(phone)
+      left: 50%
+      top: 42%
+      transform: translateX(-50%)
+    @include respond(phone-mini)
+      padding: auto
+
+  &__line
+    width: 2.6rem
+    height: 1px
+    background-color: #008139
+    margin-top: 3rem
+    margin-bottom: 4rem
+    
+
+  &__item
+    display: flex
+    min-width: 26rem
+    font-family: $roboto
+    font-weight: 100
+    color: #363434
+    font-size: 2.4rem
+    line-height: 2.8rem
+    letter-spacing: .1rem
+
+  &__img
+    align-self: self-start
+    height: auto
+    margin-right: 2rem
+    margin-bottom: 1.8rem
+
+    
+    &_1
+      width: 1.4rem
+      @include respond(phone)
+        width: 1rem
+    &_2
+      width: 1.9rem
+      @include respond(phone)
+        width: 1.6rem
+    &_3
+      width: 2.2rem
+      @include respond(phone)
+        width: 1.8rem
+    &_4
+      width: 2rem
+      @include respond(phone)
+        width: 1.6rem
+
+  &__icon
+    display: flex
+    margin-left: 18rem
+    margin-top: 5rem
+    padding-right: 7.2rem
+    @include respond(phone)
+      margin-left: 10rem
+    &_img
+      margin-left: 1.3rem
+      @include respond(phone)
+        width: 20px
+        height: auto
+      @include respond(phone-mini)
+        width: 15px
+        height: auto
+  &r__icon_img
+    &:hover
+      color: red
+
+.tree-overlay
+  position: absolute
+  bottom: -5rem
+  left: -10rem
+  width: 112%
+  height: auto
+  z-index: 100
+  pointer-events: none
+  @include respond(big-screen)
+    display: none
+
+.map-wrapper
+  width: 100%
+  height: 78.8rem
+  position: relative
+  @include respond(phone)
+    height: 145rem
+
+#map 
+  width: 100%
+  height: 100%
+  position: relative
+.center-both__title
+  padding-top: 2rem
+
+.footer__block
+  position: absolute
+  background: $color-black
+  bottom: 0
+  left: 0
+  z-index: 500
+  width: 100%
+  min-height: 13.8rem
+
+  &_box
+    max-width: 117rem
+    height: auto
+    margin: 0 auto
+    padding: 2rem 1.5rem
+    @include respond(tab-port)
+            
+  &_inner1  
+    display: none
+    @include respond(tab-port)
+      display: flex
+      flex-direction: column
+      text-align: center
+      margin: 0 auto
+
+  &_inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    @include respond(tab-port)
+      display: none
+
+  &_list
+    display: flex
+    margin-left: 40rem
+    @include respond(auxiliary)
+        margin-left: 30rem
+    @include respond(tab-land)
+        margin-left: 12rem
+    @include respond(tab-port)
+      margin: 0 auto
+      margin-top: 4rem
+    
+  &_button
+    background: $color-black
+    color: #F5F5F5
+    border: 1px solid $color-yellow
+    border-radius: .5rem
+    font-family: $roboto
+    font-weight: 400
+    font-size: 1.5rem
+    padding: 1.4rem 4.1rem
+    cursor: pointer
+    @include respond(tab-port)
+      margin: 5rem auto
+
+
+  &_text
+    display: flex
+    @include respond(tab-port)
+      flex-direction: column
+      margin: 2rem auto
+      text-align: center
+  &_text-a
+    text-decoration: none
+    font-family: $roboto
+    font-weight: 200
+    color: #7D808A
+    font-size: 1.3rem
+    margin-top: 1.8rem
+    margin-right: 4rem
+    
+  &_a
+    text-decoration: none
+    font-family: $roboto
+    font-weight: 400
+    color: #EAEAEA
+    font-size: 1.3rem
+    margin-right: 2.4rem
+
+.logoFooter
+  width: 15%
+  @include respond(tab-port)
+    width: 20%
+    margin: 0 auto

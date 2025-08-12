@@ -1,0 +1,210 @@
+// Кнопка
+.btn
+  &, &:link, &:visited
+    background: radial-gradient(ellipse farthest-side at 50% -10%, #fdf4c8 5%, #FFE456 70%, #FFB800 120%)
+    color: $color-test-btn
+    padding: 2.1rem 7.5rem 2.1rem 7.5rem
+    border-radius: .5rem
+    text-decoration: none
+    margin: 2rem
+    line-height: 3.2rem
+    -webkit-box-shadow: 0px 14px 0px 0px $color-test-btn
+    -moz-box-shadow: 0px 14px 0px 0px $color-test-btn
+    box-shadow: 0px 3px 0px 0px $color-test-btn
+    font-size: 1.5rem
+    letter-spacing: 7%
+    text-transform: uppercase
+    border: none
+    font-family: "Montserrat", sans-serif
+    font-optical-sizing: auto
+    font-weight: 600
+    font-style: normal
+    transition: 0.5s
+    // @include respond(tab-land)
+    //   font-size: 1.8rem
+    //   padding: 1.5rem 3.7rem
+    // @include respond(tab-port)
+    //   padding: 2rem 5rem
+  &:hover
+    animation: gradient-animation-hover .5s forwards
+  &:active
+    animation: gradient-animation-active .2s forwards
+
+@keyframes gradient-animation-hover
+  0%
+    background: radial-gradient(ellipse farthest-side at 50% -10%, #fdf4c8 5%, #FFE456 70%, #FFB800 120%)
+
+  100%
+    background: radial-gradient(ellipse farthest-side at 50% -10%, #fdf4c8 5%, #FFE456 60%, #FFB800 100%)
+
+@keyframes gradient-animation-active
+  0%
+    background: radial-gradient(ellipse farthest-side at 50% -10%, #fdf4c8 5%, #FFE456 60%, #FFB800 100%)
+
+  100%
+    background: radial-gradient(ellipse farthest-side at 50% 110%, #fdf4c8 5%, #FFE456 60%, #FFB800 100%)
+
+
+// Переключатели слайдов
+.person-controls
+  position: absolute
+  top: 92%
+  left: 50%
+  transform: translateX(-50%)
+  display: flex
+  gap: 2rem
+  z-index: 10
+.nav
+  position: absolute
+  transform: translateY(-50%)
+  background: linear-gradient(to bottom, #FFF8B6, #FFC700)
+  font-size: 4.6rem
+  border: none
+  border-radius: 50%
+  width: 5rem
+  height: 5rem
+  cursor: pointer
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2)
+  color: #6A5300
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 50
+  &:hover
+    background: linear-gradient(to bottom, #ffe259, #ffa751)
+
+.prev
+  left: -110%
+  
+.next 
+  right: -110%
+
+.progress-bar
+  // top: 110%
+  width: 12rem
+  height: 0.8rem
+  background-color: #ddd
+  border-radius: 5px
+  overflow: hidden
+  position: relative
+
+  background: #dcdcdc
+  border-radius: 10px
+  background: linear-gradient(to right, #dcdcdc, #f0f0f0)
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2)
+  border-radius: 10px
+
+.progress-fill
+  height: 100%
+  position: absolute
+  left: 0
+  width: 2.4rem
+  background: linear-gradient(to right, #ffcc00, #ff9900)
+  border-radius: 10px
+  transition: left 0.4s ease-in-out, width 0.4s ease-in-out
+
+
+
+// gallery
+.gallery-controls
+  position: absolute
+  bottom: 3rem
+  left: 50%
+  transform: translateX(-50%)
+  display: flex
+  gap: 2rem
+  z-index: 10
+
+.navg
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  background: linear-gradient(to bottom, #FFF8B6, #FFC700)
+  font-size: 4.6rem
+  border: none
+  border-radius: 50%
+  width: 5rem
+  height: 5rem
+  cursor: pointer
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2)
+  color: #6A5300
+  display: flex
+  justify-content: center
+  align-items: center
+  &:hover
+    background: linear-gradient(to bottom, #ffe259, #ffa751)
+
+.prevg
+  left: -110%
+  
+.nextg 
+  right: -110%
+
+.progress-barg
+  width: 12rem
+  height: .8rem
+  background-color: #ddd
+  border-radius: 5px
+  overflow: hidden
+  position: relative
+
+.progress-fillg
+  height: 100%
+  position: absolute
+  left: 0
+  width: 2.4rem
+  background: linear-gradient(to right, #ffcc00, #ff9900)
+  border-radius: 10px
+  transition: left 0.4s ease-in-out, width 0.4s ease-in-out
+
+// review
+.review-controls
+  position: absolute
+  bottom: 3rem
+  left: 50%
+  transform: translateX(-50%)
+  display: flex
+  gap: 2rem
+  z-index: 10
+
+.navr
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  background: linear-gradient(to bottom, #FFF8B6, #FFC700)
+  font-size: 4.6rem
+  border: none
+  border-radius: 50%
+  width: 5rem
+  height: 5rem
+  cursor: pointer
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2)
+  color: #6A5300
+  display: flex
+  justify-content: center
+  align-items: center
+  &:hover
+    background: linear-gradient(to bottom, #ffe259, #ffa751)
+
+.prevr
+  left: -110%
+  
+.nextr
+  right: -110%
+
+.progress-barr
+  width: 12rem
+  height: .8rem
+  background-color: #ddd
+  border-radius: 5px
+  overflow: hidden
+  position: relative
+
+.progress-fillr
+  height: 100%
+  position: absolute
+  left: 0
+  width: 2.4rem
+  background: linear-gradient(to right, #ffcc00, #ff9900)
+  border-radius: 10px
+  transition: left 0.4s ease-in-out, width 0.4s ease-in-out

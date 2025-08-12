@@ -1,0 +1,100 @@
+.dir
+  background-image: url(../img/dirBackground.png)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: top
+  width: 100%
+  height: auto
+  position: relative
+  
+.directions
+  max-width: 117rem
+  margin: 0 auto
+  text-align: center
+  min-height: 159rem
+
+  &__title
+    margin-top: 10rem
+    
+  &__box
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    padding: 0 2.5rem 4.5rem 2.5rem
+    column-gap: 3rem
+    row-gap: 5.5rem
+    margin-top: 12rem
+    @include respond(tab-land)
+      grid-template-columns: repeat(2, 1fr)
+      row-gap: 4rem
+      column-gap: 2rem
+    @include respond(phone)
+      grid-template-columns: 1fr
+      row-gap: 3rem
+      column-gap: 0
+
+
+    &_inner
+      position: relative
+      background-color: $color-white
+      text-align: center
+      border-radius: .5rem
+      border: 1px #EAEAEA solid
+      transition: transform 0.4s ease
+      &:nth-child(2)
+        height: 120%
+      &:nth-child(5)
+        height: 80%
+        margin-top: 10rem
+      @include respond(tab-land)
+      &:nth-child(2)
+        height: 100%
+        margin-top: 0
+      &:nth-child(5)
+        height: 100%
+        margin-top: 0
+      &:hover
+        transform: translateY(4px)
+
+    &__img
+      overflow: hidden
+      margin-top: -2.5rem
+      width: 88%
+      
+
+    &_inner-h3
+      font-family: $roboto
+      font-weight: 500
+      color: #363434
+      font-size: 2.3rem
+      max-width: 20rem
+      margin: 0 auto
+      margin-top: 4.5rem
+    &_inner-line
+      background: $color-green
+      margin: 0 auto
+      width: 2.6rem
+      height: .1rem
+      margin-top: 2.5rem
+      margin-bottom: 2.5rem
+    &_inner-p
+      margin: 0 auto
+      margin-bottom: 4.5rem
+      max-width: 28rem
+  &__img-group
+    width: 100%
+    height: auto
+    position: absolute
+    margin: 0 auto
+    bottom: 0rem
+    right: 0rem
+    z-index: 20
+    @include respond(tab-land)
+      bottom: -10rem
+
+
+  &__btn
+    margin-top: 5rem
+    position: relative
+    z-index: 100
+    
+

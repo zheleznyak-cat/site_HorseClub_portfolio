@@ -1,0 +1,220 @@
+.format
+  margin-top: 10rem
+  background-image: url(../img/form_back.png)
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: top
+  overflow: hidden
+  width: 100%
+  height: 45vw
+  position: relative
+  @include respond(tab-land)
+    background-size: cover
+    height: 100vh
+  @include respond(phone)
+    background-size: cover
+    height: 220vw
+  
+
+.form
+  max-width: 117rem
+  margin: 0 auto
+  text-align: center
+
+  &__img-group
+    width: 100vw
+    height: auto
+    position: absolute
+    margin: 0 auto
+    top: 5rem
+    left: 0
+    z-index: 200
+    pointer-events: none
+    @include respond(auxiliary)
+      width: 110vw
+      height: auto
+      left: -10%
+    @include respond(tab-land)
+      width: auto
+      height: 53%
+      top: 47%
+      left: 74%
+      transform: translateX(-50%)
+    @include respond(tab-port)
+      left: 85%
+    @include respond(phone)
+      width: auto
+      height: 43%
+      left: 90%
+      top: 57%
+    @include respond( phone-mini)
+      left: 87%
+
+  &__img-group1
+    width: 20vw
+    height: auto
+    position: absolute
+    margin: 0 auto
+    top: 18vw
+    right: 6vw
+    z-index: 200
+    pointer-events: none
+    @include respond(auxiliary)
+      top: 25vw
+      right: 4vw
+    @include respond(tab-land)
+      display: none
+
+  &__book
+    width: 50rem
+    min-height: 55rem
+    position: absolute
+    background: $color-white
+    top: 3vw
+    right: 12vw
+    padding: 4rem 4rem 5rem 4rem
+    border-radius: .5rem
+    box-shadow: 0px 14px 11px -3px rgba(0, 0, 0, 0.22)
+    z-index: 150
+    @include respond(tab-land)
+      top: 6vh
+      left: 50%
+      transform: translateX(-50%)
+    @include respond(tab-port)
+      top: 12vh
+
+  &__book-h2
+    color: $color-gray-dark
+    font-size: 3.5rem
+    margin: 0 auto
+    letter-spacing: 0rem
+    font-weight: 200
+    margin-bottom: 1rem
+  
+  &__book-p
+    margin-bottom: 1rem
+
+  &__input_name
+    margin-bottom: 2rem
+
+  &__input
+    autocomplete: off
+    font-size: 1.8rem
+    font-family: $roboto
+    color: #A5A5A5
+    padding: 2rem 0 2rem 2rem
+    background: $color-white
+    border: .1rem solid #8F8F8F
+    border-radius: 0.5rem
+    width: 100%
+    z-index: 200
+  
+  &__input.error
+    border-color:  #FF5C00
+    // color: #FF5C00
+  &__input.error:focus
+    outline: none
+    border-color:  #FF5C00
+
+  &__label
+    display: none
+    font-size: 1rem
+    font-family: $roboto
+    color: #FF5C00
+    text-align: left
+    margin-bottom: 0.6rem
+
+  &__btn
+    margin-top: 1rem
+    margin-bottom: 1rem
+    transition: background-color 0.3s ease, opacity 0.3s ease
+  
+  &__btn-a 
+    display: inline-block
+    background-color: gray
+    color: white
+    text-decoration: none
+    pointer-events: none
+    opacity: 0.5
+    transition: background 0.3s, opacity 0.3s
+    border-radius: 5px
+    min-width: 38rem
+    text-align: center
+
+  &__btn-a.disabled
+    pointer-events: none
+    opacity: 0.5
+    background-color: gray
+
+  &__btn-a.enabled
+    background-color: blue
+    pointer-events: auto
+    opacity: 1
+    
+  &__checkbox
+    position: relative
+    text-align: left
+    &_label
+      font-size: 1.5rem
+      font-family: $roboto
+      color: #8A8A8A
+      margin-left: 1rem
+
+input[type="checkbox"]
+  
+  width: 20px
+  height: 20px
+  border: 2px solid #FF5C00
+  border-radius: .2rem
+  appearance: none
+  outline: none
+  cursor: pointer
+  position: relative
+  transition: border-color 0.3s ease
+
+input[type="checkbox"]::before
+  content: ""
+  position: absolute
+  // display: none
+  left: 4px
+  top: .4px
+  width: 8px
+  height: 14px
+  border: solid #0A8F08
+  border-width: 0 4px 4px 0
+  transform: rotate(45deg) scale(1)
+  opacity: 0
+  transition: opacity 0.3s ease
+input[type="checkbox"]:hover::before
+  transform: rotate(45deg) scale(1.1)
+
+
+input[type="checkbox"]:checked::before
+  opacity: 1
+
+input[type="checkbox"]:checked
+  border: 2px solid #FFC700
+
+input[type="checkbox"]:disabled + label
+  opacity: 0.5
+  pointer-events: none
+
+.hint 
+  color: red
+  font-size: 1.4rem
+  margin-top: 5px
+  opacity: 1
+  max-height: 100px
+  transition: opacity 0.3s ease, max-height 0.3s ease
+  overflow: hidden
+  text-align: left
+
+.btn.enabled
+  background-color: blue
+  pointer-events: auto
+  opacity: 1
+
+.checkbox_span
+  text-decoration: underline
+
+

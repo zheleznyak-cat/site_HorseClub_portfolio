@@ -1,0 +1,50 @@
+.person
+  margin: 0 auto
+  margin-bottom: 8rem
+  
+  &__title
+    margin-top: 10rem
+  &__box
+    max-width: 192rem
+    margin-top: 7rem
+    &__img-inner
+      margin-right: 0.5rem
+      transition: filter 0.3s ease
+    &__img-inner:hover 
+      filter: brightness(70%)
+      cursor: url(../img/cursor.png), auto
+    &__img-inner:active
+      scale: 150%
+      filter: brightness(100%)
+
+    &__img-inner:last-child
+      margin-right: 0
+    &__img
+      display: flex
+      justify-content: center
+      align-items: center
+    
+  &__img
+    max-width: 100%
+    max-height: 100%
+    object-fit: contain
+
+.slider-container
+    position: relative
+    max-width: 100%
+    margin: auto
+    overflow: hidden
+    min-height: 30rem
+    padding-bottom: 17rem
+
+.slider-wrapper
+    display: flex
+    transition: transform 0.5s ease
+    width: 100%
+    
+.slide 
+    width: 100%
+    min-width: 100%
+    flex-shrink: 0
+    box-sizing: border-box
+

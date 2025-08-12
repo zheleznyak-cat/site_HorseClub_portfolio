@@ -1,0 +1,80 @@
+.about
+  max-width: 117rem
+  margin: 0 auto
+  @include respond(phone)
+      padding: 3rem
+
+  &__box
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+    justify-content: center
+    @include respond(phone)
+      padding: 5rem 0
+
+  &__img
+    margin-top: 9rem
+    margin-left: -10vw
+    @include respond(auxiliary)
+      margin-left: 0
+      padding-left: 2rem
+    @include respond(phone)
+      display: none
+    img
+      object-fit: cover
+      width: 46vw
+      height: auto
+  &__cards
+    display: grid
+    grid-template-columns: 1fr 1fr
+    text-align: left
+    margin-top: 7rem
+    row-gap: 2.5rem
+    column-gap: 6rem
+    @include respond(auxiliary)
+      padding-right: 2rem
+    @include respond(phone)
+      margin: 0 auto
+      text-align: center
+    @include respond(phone-mini)
+      grid-template-columns: 1fr
+      row-gap: 4rem
+      column-gap: 0
+      padding: 0 7rem
+  
+  
+    &_card-h4
+      font-family: "Philosopher", sans-serif
+      font-weight: 700
+      color: $color-green
+      font-size: 4.2rem
+    &_card-p
+      font-family: $roboto
+      font-weight: 500
+      color: #0B0B0B
+      font-size: 1.7rem
+      line-height: 2.5rem
+  
+    &_text
+      grid-column: 1 / -1
+      font-family: $roboto
+      font-weight: 400
+      color: #7E7E7E
+      font-size: 1.5rem
+      line-height: 2.8rem
+      margin-top: 4rem
+      @include respond(big-screen)
+        display: none
+  &__text-p
+    grid-column: 1 / -1
+    font-family: $roboto
+    font-weight: 400
+    color: #7E7E7E
+    font-size: 1.5rem
+    line-height: 2.8rem
+    margin-top: 4rem
+    display: none
+    @include respond(big-screen)
+      display: block
+      margin: 2rem

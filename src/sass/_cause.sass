@@ -1,0 +1,76 @@
+.cause
+  max-width: 117rem
+  margin: 0 auto
+  
+  &__box
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    justify-items: center
+    text-align: center
+    gap: 2rem
+    @include respond(auxiliary)
+      margin-left: 2rem
+      margin-right: 2rem
+      @include respond(tab-port)
+        grid-template-columns: repeat(2, 2fr)
+      @include respond(phone-mini)
+        grid-template-columns: repeat(1, 1fr)
+    &_inner
+      max-width: 30rem
+      margin-top: 5rem
+      @include respond(tab-port)
+        max-width: 70rem
+      @include respond(phone)
+        max-width: 70rem
+
+    &_block-img
+      width: auto
+      height: 140px
+      overflow: hidden
+      margin: 0 auto
+      align-content: center
+      
+
+
+    &_inner-img1
+      width: 48%
+      height: auto
+      display: block
+      margin: 0 auto
+    
+    &_inner-img2
+      width: 80%
+      height: auto
+      display: block
+      margin: 0 auto
+    &_inner-img3
+      width: 40%
+      height: auto
+      display: block
+      margin: 0 auto
+    &_inner-img4
+      width: 68%
+      height: auto
+      display: block
+      margin: 0 auto
+    
+    &_inner-h3
+      width: 17vw
+      margin: 0 auto
+      margin-top: 2.3rem
+      @include respond(tab-port)
+        width: 40vw
+      @include respond(phone-mini)
+        width: 60vw
+
+    &_inner-p
+      width: 15vw
+      margin: 0 auto
+      margin-top: 2.6rem
+      @include respond(tab-port)
+        width: 40vw
+      @include respond(phone-mini)
+        width: 60vw
+
+
+

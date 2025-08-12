@@ -1,0 +1,178 @@
+.review
+  margin: 7rem auto 3rem
+  width: 100%
+  height: auto
+  padding-top: 4rem
+
+.review-container
+  position: relative
+  margin-top: 3rem
+  width: 100%
+  height: auto
+
+.review-track
+  display: flex
+  flex-wrap: nowrap
+  overflow-x: hidden
+  justify-content: center
+  width: 100%
+  height: auto
+  will-change: transform
+  height: 60rem
+  @include respond(auxiliary)
+    height: 60vh
+  @include respond(big-screen)
+    height: 48vh
+.review-card
+  margin: 0 auto
+  padding: 4rem 4.5rem 3.5rem 4.5rem
+  border: 1px solid #EAEAEA
+  box-shadow: 0px 16px 51px 1px rgba(0, 0, 0, 0.11)
+  max-width: 30%
+  height: 52%
+  flex: 0 0 30%
+  flex-shrink: 0
+  box-sizing: border-box
+  min-width: 10%
+  position: relative
+  transform: translateY(0)
+  display: block
+  opacity: 1
+  margin-right: 1rem
+  transition: transform 0.5s ease-in-out
+
+  @include respond(auxiliary)
+    height: 60%
+    flex: 0 0 35%
+    max-width: 33%
+  @include respond(big-screen)
+    // max-width: 50%
+    height: 60%
+    flex: 0 0 50%
+  @include respond(tab-land)
+    max-width: 50%
+    // height: 60%
+    flex: 0 0 80%
+  @include respond(tab-port)
+    max-width: 70%
+    flex: 0 0 90%
+  @include respond(phone)
+    max-width: 100%
+    flex: 0 0 90%
+  &::last-child
+    margin-right: 0
+
+  &__text
+    max-width: 48rem
+    font-family: $roboto
+    font-size: 1.5rem
+    letter-spacing: .24
+    color: #363434
+    margin-bottom: 1.5rem
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    overflow: hidden
+    text-overflow: ellipsis
+    max-height: 4.5em
+
+  &__name
+    font-family: $roboto
+    font-size: 1.6rem
+    letter-spacing: .21
+    color: #101820
+    margin-bottom: 1rem
+    margin-left: 1.5rem&__name
+    font-family: $roboto
+    font-size: 1.6rem
+    letter-spacing: .21
+    color: #101820
+    margin-bottom: 1rem
+    margin-left: 1.5rem
+
+  // Кнопка подробнее
+  &__more
+    // display: none!!!!!!!!
+    color: #008139
+    border: none
+    cursor: pointer
+    border-radius: 0.5rem
+    padding: .7rem 2rem .7rem 3rem
+    background-color: $color-white
+    box-shadow: 0px .5px 10px .5px rgba(0, 0, 0, 0.1)
+    margin: 0 auto
+    display: block
+    margin-bottom: 4.5rem
+
+  &__avatar
+    align-self: center
+    object-fit: contain
+
+  
+  &__author
+    display: flex
+    justify-content: space-between
+    margin-top: 3rem
+
+    &_box
+      display: flex
+
+  &__socials
+    margin-left: 1.5rem
+
+    &_vk
+      margin-left: 1rem
+
+  &__quote
+    align-self: center
+    object-fit: contain
+    width: 4.5rem
+    height: auto
+
+.review-card--edge::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(255, 255, 255, 0.5)
+    pointer-events: none
+    z-index: 300
+
+.review-card--center
+    transform: translateY(3rem)
+
+.review-card--hidden
+    display: none !important
+
+
+.modal 
+  display: none
+  position: fixed
+  z-index: 999
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, 0.5)
+
+  &__content
+    background: white
+    padding: 2rem
+    margin: 10% auto
+    width: 80%
+    max-width: 500px
+    border-radius: 10px
+    position: relative
+
+  &__close
+    position: absolute
+    top: 1rem
+    right: 1rem
+    font-size: 2rem
+    cursor: pointer
+    z-index: 200
+
+.review-controls
+  margin-bottom: 5rem

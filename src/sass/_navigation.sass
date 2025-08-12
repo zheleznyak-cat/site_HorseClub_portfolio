@@ -1,0 +1,236 @@
+.navigation
+  display: flex
+  justify-content: space-between
+  padding-top: 0.9rem
+  margin: 0 auto
+  
+  &__nav
+    display: flex
+    
+    
+  &__list
+    display: flex
+    align-self: center
+    list-style-type: none
+    justify-content: space-between
+    text-transform: uppercase
+    @include respond(tab-land)
+      display: none
+    
+  &__link
+    text-decoration: none
+    list-style-type: none
+    font-family: $roboto
+    font-weight: 400
+    font-size: 1.3rem
+    color: #202020
+    cursor: pointer
+    margin-right: 4rem
+    &:hover
+      border-bottom: 1px solid #008139
+      padding-bottom: 1rem
+
+  &__item
+    transition: 0.2s
+    &:hover
+      transform: translateY(1px)
+  &__contact
+    margin-top: 1.4rem
+    display: flex
+    align-content: center
+
+  &__contact-img
+    margin-top: 0.2rem
+    margin-right: 1rem
+    @include respond(phone-mini)
+      display: none
+
+  &__contact-tel
+    position: relative
+    @include respond(phone-mini)
+      display: none
+
+  &__contact-tel-number
+    font-family: $roboto
+    font-weight: 700
+    font-size: 1.8rem
+    color: #202020
+    cursor: pointer
+    text-decoration: none
+  &__contact-time
+    position: absolute
+    top: 2.5rem
+    left: .4rem
+    font-family: $roboto
+    font-weight: 400
+    font-size: 1.3rem
+    color: #7D808A
+    padding-top: 1rem
+
+
+// Меню бургер
+.navigation-hidden
+  display: none
+  @include respond(tab-land)
+    display: block
+
+  &__toggle
+    display: none
+  
+  &_box
+    display: flex
+    position: fixed
+    padding: 8px 10px 8px 20px
+    font-family: $roboto
+    font-weight: 400
+    left: 35rem
+    font-size: 15px
+    line-height: 15px
+    color: $color-gray-dark
+    text-align: center
+    border: 1px solid $color-green
+    border-radius: 3px
+    top: 1rem 
+    z-index: 200
+    @include respond(phone)
+      left: 25rem
+    @include respond(phone-mini)
+      left: auto
+      right: 2rem
+
+  &__icon
+    position: relative
+    top: -5px
+    left: -8px
+    align-items: center
+    &,
+    &::before,
+    &::after
+      width: 10px
+      height: 2px
+      background-color: $color-green
+      display: inline-block
+    &::before,
+    &::after
+      content: ""
+      position: absolute
+      left: 0
+      transition: all .2s
+    &::before
+      top: -4px
+    &::after
+      top: 4px
+  //   &__toggle:hover &__icon::before
+  //     top: 4px
+  // &__button:hover &__icon::after
+  //   top: 4px
+  // &__toggle:checked + &__button &__icon
+  //   background: transparent
+  // &__toggle:checked + &__button &__icon::before
+  //   top: 0
+  //   transform: rotate(135deg)
+
+  // &__toggle:checked + &__button &__icon::after
+  //   top: 0
+  //   transform: rotate(-135deg)
+
+  &__nav_close-btn
+    position: relative
+    top: -5%
+    right: -41%
+    width: 24px
+    height: 24px
+    cursor: pointer
+    z-index: 400
+    color: $color-white
+    &::before,
+    &::after
+      content: ""
+      position: absolute
+      width: 20px
+      height: 2px
+      background-color: $color-white
+      transform-origin: center
+    &::before 
+      transform: translate(-50%, -50%) rotate(45deg)
+    &::after 
+      transform: translate(-50%, -50%) rotate(-45deg)
+
+  &__nav
+    display: none
+    height: 100vh
+    width: 45vw
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 300
+    background-color: rgba(13, 13, 13, 0.95)
+    border-right: 5px solid $color-green
+    text-align: center
+    padding-top: 11rem
+    margin: 0 auto
+    // opacity: 0
+    // width: 0
+    @include respond(phone)
+      width: 100vw
+
+
+
+    // transition: all 1s
+  // &__list
+  //   position: fixed
+  //   top: 11rem
+  //   left: 80.5rem
+  //   list-style: none
+  //   @include respond(phone)
+  //     left: 85rem
+  //   @include respond(phone-mini)
+  //     left: 55rem
+  // &__item
+  //   margin-top: .8rem
+  &__link
+    text-decoration: none
+    list-style-type: none
+    color: $color-white
+    font-family: $roboto
+    font-weight: 400
+    font-size: 15px
+    line-height: 50px
+    
+    cursor: pointer
+    &:hover
+      text-decoration: underline $color-white
+  // &__btn
+  //   position: fixed
+  //   top: 30rem 
+  //   left: 76rem
+  //   width: 15.5rem
+  //   z-index: 400
+  //   @include respond(phone)
+  //     left: 81rem
+  //   @include respond(phone-mini)
+  //     left: 50.5rem
+  //   &, &:link, &:visited
+  //     color: $color-white
+  //     padding: 1.1rem 2rem
+  //     // background: $color-brown-dark
+  //     border-radius: 1.5rem
+  //     // font-size: $font-size-paragraph
+  //     border: none
+  //     text-decoration: none
+  //   @include respond(tab-land)
+  //     font-size: 1.8rem
+  //     padding: 1.5rem 3.7rem
+  //   @include respond(tab-port)
+  //     padding: 2rem 5rem
+
+  //   &:hover
+  //     top: 30.4rem
+  
+  // &__toggle:checked ~ &__background
+  //   transform: scale(20)
+  // &__toggle:checked ~ &__nav
+  //   opacity: 1
+  //   width: 100%
+
+  // 

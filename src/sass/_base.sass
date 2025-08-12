@@ -1,0 +1,62 @@
+$color-gray-light: #EFEFEF
+$color-gray: #55565B
+$color-gray-dark: #202020
+$color-yellow: #FDE724
+$color-white: #FFFFFF
+$color-green: #008139
+$color-test-btn: #6A5300
+$color-black: #000
+
+
+
+@mixin respond($braekpoint)
+
+    @if $braekpoint == phone-mini
+        @media only screen and (max-width: 350px)
+            @content
+            
+    @if $braekpoint == phone
+        @media only screen and (max-width: 480px)
+            @content
+
+    @if $braekpoint == tab-port
+        @media only screen and (max-width: 550px)
+            @content
+
+    @if $braekpoint == tab-land
+        @media only screen and (max-width: 900px)
+            @content
+
+    @if $braekpoint == big-screen
+        @media only screen and (max-width: 1160px)
+            @content
+
+    @if $braekpoint == auxiliary
+        @media only screen and (max-width: 1300px)
+            @content
+
+body
+    overflow-x: hidden
+
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+    @include respond(auxiliary)
+        font-size: 56%
+    @include respond(big-screen)
+        font-size: 46%
+    @include respond(tab-land)
+        font-size: 38%
+    @include respond(tab-port)
+        font-size: 34%
+    @include respond(phone)
+        font-size: 42%
+
+.container
+    max-width: 192rem
+    margin: 0 auto
+
