@@ -42,12 +42,12 @@
   &__contact-img
     margin-top: 0.2rem
     margin-right: 1rem
-    @include respond(phone-mini)
+    @include respond(phone)
       display: none
 
   &__contact-tel
     position: relative
-    @include respond(phone-mini)
+    @include respond(phone)
       display: none
 
   &__contact-tel-number
@@ -93,9 +93,9 @@
     top: 1rem 
     z-index: 200
     @include respond(phone)
-      left: 25rem
-    @include respond(phone-mini)
       left: auto
+      right: 4rem
+    @include respond(phone-mini)
       right: 2rem
 
   &__icon
