@@ -10,7 +10,7 @@ const htmlmin = require("gulp-htmlmin");
 gulp.task("server", function () {
   browserSync({
     server: {
-      baseDir: "dist",
+      baseDir: "docs",
     },
     browser: "chrome", //чтобы открывался в googl chrom
   });
@@ -25,7 +25,7 @@ gulp.task("styles", function () {
     .pipe(rename({ suffix: ".min", prefix: "" }))
     .pipe(autoprefixer())
     .pipe(cleanCSS({ compatibility: "ie8" }))
-    .pipe(gulp.dest("dist/css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(browserSync.stream());
 });
 
@@ -38,23 +38,23 @@ gulp.task("html", function () {
   return gulp
     .src("src/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("dist/"));
+    .pipe(gulp.dest("docs/"));
 });
 
 gulp.task("scripts", function () {
-  return gulp.src("src/js/**/*.js").pipe(gulp.dest("dist/js"));
+  return gulp.src("src/js/**/*.js").pipe(gulp.dest("docs/js"));
 });
 
 gulp.task("fonts", function () {
-  return gulp.src("src/fonts/**/*").pipe(gulp.dest("dist/fonts"));
+  return gulp.src("src/fonts/**/*").pipe(gulp.dest("docs/fonts"));
 });
 
 gulp.task("icons", function () {
-  return gulp.src("src/icons/**/*").pipe(gulp.dest("dist/icons"));
+  return gulp.src("src/icons/**/*").pipe(gulp.dest("docs/icons"));
 });
 
 gulp.task("images", function () {
-  return gulp.src("src/img/**/*").pipe(imagemin()).pipe(gulp.dest("dist/img"));
+  return gulp.src("src/img/**/*").pipe(imagemin()).pipe(gulp.dest("docs/img"));
 });
 
 gulp.task(
