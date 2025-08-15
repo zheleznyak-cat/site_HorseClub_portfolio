@@ -50,7 +50,7 @@
         <svg
           viewBox="0 0 320 660"
           width="260"
-          style="max-width: 100%; height: auto; display: block"
+          style="max-width: auto; height: auto; display: block"
         >
           <ellipse cx="160" cy="645" rx="90" ry="10" fill="rgba(0,0,0,0.20)" />
           <rect
