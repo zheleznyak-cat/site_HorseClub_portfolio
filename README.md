@@ -36,7 +36,7 @@
           </defs>
           <g clip-path="url(#deskScreen)">
             <image
-              href="../screenshots/desktop.png"
+              href="screenshots/desktop.png"
               x="70"
               y="60"
               width="760"
@@ -72,7 +72,7 @@
           <circle cx="210" cy="37" r="4" fill="#2b2f3a" />
           <g clip-path="url(#phoneScreen)">
             <image
-              href="../screenshots/mobile.png"
+              href="screenshots/mobile.png"
               x="36"
               y="56"
               width="248"
