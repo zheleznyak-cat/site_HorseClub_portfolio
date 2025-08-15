@@ -1,5 +1,5 @@
 
-<a href="https://example.com" target="_blank" rel="noreferrer noopener" style="text-decoration:none;">
+<a href="https://zheleznyak-cat.github.io/site_HorseClub_portfolio/" target="_blank" rel="noreferrer noopener" style="text-decoration:none;">
   <div style="display:flex; align-items:flex-start; gap:24px; flex-wrap:wrap;">
     <svg viewBox="0 0 900 620" width="760" style="max-width:100%; height:auto; display:block;">
       <ellipse cx="450" cy="600" rx="260" ry="14" fill="rgba(0,0,0,0.20)"/>
