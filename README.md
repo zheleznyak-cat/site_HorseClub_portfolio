@@ -35,8 +35,8 @@
             </clipPath>
           </defs>
           <g clip-path="url(#deskScreen)">
-            <image
-              href="screenshots/desktop.png"
+            <img
+              src="screenshots/desktop.png"
               x="70"
               y="60"
               width="760"
@@ -71,8 +71,8 @@
           <rect x="126" y="34" width="68" height="6" rx="3" fill="#2b2f3a" />
           <circle cx="210" cy="37" r="4" fill="#2b2f3a" />
           <g clip-path="url(#phoneScreen)">
-            <image
-              href="screenshots/mobile.png"
+            <img
+              src="screenshots/mobile.png"
               x="36"
               y="56"
               width="248"
