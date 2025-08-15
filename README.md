@@ -11,7 +11,6 @@
       flex-wrap: wrap;
     "
   >
-    <!-- Десктоп -->
     <svg
       viewBox="0 0 900 620"
       width="760"
@@ -47,8 +46,6 @@
       <rect x="400" y="520" width="100" height="18" rx="6" fill="#2a2f3a" />
       <rect x="320" y="538" width="260" height="14" rx="7" fill="#2a2f3a" />
     </svg>
-
-    <!-- Мобильный -->
     <svg
       viewBox="0 0 320 660"
       width="260"
